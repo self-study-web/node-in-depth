@@ -20,7 +20,7 @@ function shouldContinue() {
 // Node checks whether it should allow the event loop to execute
 // In the event loop world, we refer to the execution of this loop as a tick
 while (shouldContinue()) {
-  // 1) Node looks at pendingTimers, see if any are ready to be called.If yes, node calls the releveant callbacks
+  // 1) Node looks at pendingTimers, see if any are ready to be called(setTimeout,setInterval).If yes, node calls the releveant callbacks
   // 2) Node looks at pendingOSTasks and pendingOperations, and calls relevant callbacks if any expired
   // 3) Pause execution. Continue when
   //      a) - a new pending OS task is done
